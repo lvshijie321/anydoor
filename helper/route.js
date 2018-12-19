@@ -53,6 +53,7 @@ const template = require('handlebars').compile(tplStr)
 const ext = require('../helper/mime')
 const compress = require('../helper/compress')
 const range = require('../helper/range')
+const isFresh = require('../helper/cache')
 module.exports = async function (req, res) {
   const hrefSuffix = req.url
   const filepath = path.join(conf.root, hrefSuffix)
@@ -60,6 +61,11 @@ module.exports = async function (req, res) {
     const stats = await stat(filepath)
     if (stats.isFile()) {
 
+      if (isFresh(stats, req, res)) {
+        res.statusCode = 304
+        res.end()
+        return
+      }
       let rs
       const {code, start, end} = range(stats.size, req, res)
       let params
