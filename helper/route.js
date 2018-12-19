@@ -42,7 +42,6 @@
 //   res.statusCode = code
 //   res.setHeader('Content-Type', header)
 // }
-const conf = require('../src/config/defaultConfig')
 const promisify = require('util').promisify
 const fs = require('fs')
 const stat = promisify(fs.stat)
@@ -54,7 +53,7 @@ const ext = require('../helper/mime')
 const compress = require('../helper/compress')
 const range = require('../helper/range')
 const isFresh = require('../helper/cache')
-module.exports = async function (req, res) {
+module.exports = async function (req, res, conf) {
   const hrefSuffix = req.url
   const filepath = path.join(conf.root, hrefSuffix)
   try {
