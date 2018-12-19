@@ -9,7 +9,8 @@
     "fix": "eslint --fix ."
   },
   "pre-commit": [
-      "fix", "lint"
+    "fix",
+    "lint"
   ],
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "homepage": "https://github.com/shijue1/anydoor#readme",
   "devDependencies": {
     "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "handlebars": "^4.0.12"
   }
 }
