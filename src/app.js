@@ -25,8 +25,8 @@ const conf = require('./config/defaultConfig')
 const chalk = require('chalk')
 const route = require('../helper/route')
 http.createServer((req, res) => {
-  route(req, res)
+    route(req, res)
 }).listen(conf.port, conf.hostname, () => {
-  const addr = `http://${conf.hostname}:${conf.port}`
-  console.info(`Server started at ${chalk.green(addr)}`)
+    const addr = `http://${conf.hostname}:${conf.port}`
+    console.info(`Server started at ${chalk.green(addr)}`)
 })
