@@ -1,6 +1,9 @@
+# 基于 Node.js 的静态资源服务
+
 ## 安装方法
 ```
-npm i -g anydoor
+npm i @shijue/anydoor -g
+
 ```
 
 ## 使用方法

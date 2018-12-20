@@ -1,6 +1,7 @@
+#!  /usr/bin/env node
+
 const yargs = require('yargs')
 const Server = require('./app')
-
 
 const argv = yargs
   .usage('anydoor [options]')
@@ -23,6 +24,6 @@ const argv = yargs
   .alias('v', 'version')
   .help()
   .argv
-
-  const server = new Server(argv)
-  server.start()
+  new Server(argv).start()
+//   const server = new Server(argv)
+//   server.start()
