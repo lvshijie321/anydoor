@@ -1,34 +1,30 @@
 {
-  "name": "anydoor",
-  "version": "0.1.1",
-  "description": "Tiny NodeJS Static Web server",
-  "main": "src/app.js",
-  "bin": {
-      "anydoor": "bin/anydoor"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "pre-commit": [
-    "fix",
-    "lint"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shijue1/anydoor.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shijue1/anydoor/issues"
-  },
-  "homepage": "https://github.com/shijue1/anydoor#readme",
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
-  },
-  "dependencies": {
-    "chalk": "^2.4.1",
-    "handlebars": "^4.0.12",
-    "yargs": "^12.0.5"
+    "name": "anydoor_shijue",
+    "version": "1.0.0",
+    "description": "Tiny NodeJS Static Web server",
+    "main": "src/app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "pre-commit": [
+      "fix",
+      "lint"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/shijue1/anydoor.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/shijue1/anydoor/issues"
+    },
+    "homepage": "https://github.com/shijue1/anydoor#readme",
+    "devDependencies": {
+      "pre-commit": "^1.2.2"
+    },
+    "dependencies": {
+      "chalk": "^2.4.1",
+      "handlebars": "^4.0.12"
+    }
   }
-}
